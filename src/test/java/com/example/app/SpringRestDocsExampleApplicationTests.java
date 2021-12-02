@@ -19,6 +19,7 @@ import org.springframework.restdocs.request.RequestDocumentation;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
@@ -31,6 +32,7 @@ import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.docu
 import static org.springframework.restdocs.payload.PayloadDocumentation.*;
 import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
 import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
+import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -67,10 +69,10 @@ class SpringRestDocsExampleApplicationTests {
                 .andExpect(status().isOk())
                 .andDo(document("posts",
                         responseFields(
-                                fieldWithPath("postsDto[].id").description("글 ID"),
-                                fieldWithPath("postsDto[].title").description("글 제목"),
-                                fieldWithPath("postsDto[].content").description("글 본문"),
-                                fieldWithPath("postsDto[].author").description("글 작성자")
+                                fieldWithPath("[].id").description("글 ID"),
+                                fieldWithPath("[].title").description("글 제목"),
+                                fieldWithPath("[].content").description("글 본문"),
+                                fieldWithPath("[].author").description("글 작성자")
                         )
                 ));
     }

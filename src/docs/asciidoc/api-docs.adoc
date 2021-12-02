@@ -1,0 +1,8 @@
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+include::{snippets}/posts/http-request.adoc[]
+include::{snippets}/posts/request-body.adoc[]
+include::{snippets}/posts/http-response.adoc[]
+include::{snippets}/posts/response-fields.adoc[]
