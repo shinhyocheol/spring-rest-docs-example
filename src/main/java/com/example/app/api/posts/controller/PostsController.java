@@ -1,6 +1,6 @@
-package com.example.app.api.controller;
+package com.example.app.api.posts.controller;
 
-import com.example.app.api.dto.PostsDto;
+import com.example.app.api.posts.dto.PostsDto;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

@@ -62,4 +62,11 @@ class SpringRestDocsExampleApplicationTests {
                 ));
     }
 
+    @Test
+    void context_loads_유저_목록_조회_테스트() throws Exception {
+        ResultActions result = this.mockMvc
+                .perform(get("/v1/users").accept(MediaType.APPLICATION_JSON))
+                .andDo(print());
+    }
+
 }

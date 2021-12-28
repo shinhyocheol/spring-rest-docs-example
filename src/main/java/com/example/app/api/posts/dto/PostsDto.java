@@ -1,4 +1,4 @@
-package com.example.app.api.dto;
+package com.example.app.api.posts.dto;
 
 public class PostsDto {
 
