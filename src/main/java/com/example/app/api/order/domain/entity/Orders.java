@@ -27,6 +27,7 @@ public class Orders {
     @Column(nullable = false)
     private int amount;
 
+    @Column(nullable = false)
     private String status;
 
     @CreatedDate
