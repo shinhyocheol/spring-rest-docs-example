@@ -3,6 +3,7 @@ package com.example.app.api.users.domain.entity;
 
 import com.example.app.api.order.domain.entity.Orders;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -42,5 +43,15 @@ public class Users {
 
     @OneToMany
     private List<Orders> orders;
+
+    @Builder
+    public Users(Long id, String name, String password,
+                 String email, LocalDateTime lastLogin) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.lastLogin = lastLogin;
+    }
 
 }
