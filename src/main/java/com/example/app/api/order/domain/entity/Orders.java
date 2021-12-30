@@ -1,6 +1,9 @@
 package com.example.app.api.order.domain.entity;
 
+import com.example.app.api.product.domain.entity.Products;
+import com.example.app.api.users.domain.entity.Users;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -20,21 +23,34 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long productId;
-
-    private Long userId;
-
     @Column(nullable = false)
     private int amount;
 
     @Column(nullable = false)
-    private String status;
+    private String process;
 
     @CreatedDate
     private LocalDateTime createdAt;
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @OneToOne
+    private Products product;
+
+    @ManyToOne
+    private Users user;
+
+    @Builder
+    public Orders(
+            Long id, int amount, String process,
+            Products product, Users user) {
+        this.id = id;
+        this.amount = amount;
+        this.process = process;
+        this.product = product;
+        this.user = user;
+    }
 
 
 }
