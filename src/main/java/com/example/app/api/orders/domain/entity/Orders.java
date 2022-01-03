@@ -1,4 +1,4 @@
-package com.example.app.api.order.domain.entity;
+package com.example.app.api.orders.domain.entity;
 
 import com.example.app.api.product.domain.entity.Products;
 import com.example.app.api.users.domain.entity.Users;

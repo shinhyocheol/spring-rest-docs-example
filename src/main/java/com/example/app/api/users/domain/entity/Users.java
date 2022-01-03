@@ -1,7 +1,7 @@
 package com.example.app.api.users.domain.entity;
 
 
-import com.example.app.api.order.domain.entity.Orders;
+import com.example.app.api.orders.domain.entity.Orders;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;

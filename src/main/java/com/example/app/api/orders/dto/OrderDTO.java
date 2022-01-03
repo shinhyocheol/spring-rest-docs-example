@@ -1,4 +1,4 @@
-package com.example.app.api.order.dto;
+package com.example.app.api.orders.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

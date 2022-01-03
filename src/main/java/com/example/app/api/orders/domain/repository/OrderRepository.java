@@ -1,6 +1,6 @@
-package com.example.app.api.order.domain.repository;
+package com.example.app.api.orders.domain.repository;
 
-import com.example.app.api.order.domain.entity.Orders;
+import com.example.app.api.orders.domain.entity.Orders;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderRepository extends JpaRepository<Orders, Long> {

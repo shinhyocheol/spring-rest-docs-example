@@ -1,8 +1,8 @@
-package com.example.app.api.order.service;
+package com.example.app.api.orders.service;
 
-import com.example.app.api.order.domain.entity.Orders;
-import com.example.app.api.order.domain.repository.OrderRepository;
-import com.example.app.api.order.dto.OrderDTO;
+import com.example.app.api.orders.domain.entity.Orders;
+import com.example.app.api.orders.domain.repository.OrderRepository;
+import com.example.app.api.orders.dto.OrderDTO;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

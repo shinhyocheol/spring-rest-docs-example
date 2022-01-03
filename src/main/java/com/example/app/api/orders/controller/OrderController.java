@@ -1,7 +1,7 @@
-package com.example.app.api.order.controller;
+package com.example.app.api.orders.controller;
 
-import com.example.app.api.order.dto.OrderDTO;
-import com.example.app.api.order.service.OrderService;
+import com.example.app.api.orders.dto.OrderDTO;
+import com.example.app.api.orders.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
