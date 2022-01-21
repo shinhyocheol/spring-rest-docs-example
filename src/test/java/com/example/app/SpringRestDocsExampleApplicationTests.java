@@ -44,7 +44,7 @@ class SpringRestDocsExampleApplicationTests {
     }
 
     @Test
-    void context_loads_컨트롤러_호출_테스트() throws Exception{
+    void 컨트롤러_호출_테스트() throws Exception{
 
         ResultActions result = this.mockMvc
                 .perform(get("/posts").accept(MediaType.APPLICATION_JSON))
@@ -63,7 +63,7 @@ class SpringRestDocsExampleApplicationTests {
     }
 
     @Test
-    void context_loads_유저_목록_조회_테스트() throws Exception {
+    void 유저_목록_조회_테스트() throws Exception {
         ResultActions result = this.mockMvc
                 .perform(get("/v1/users").accept(MediaType.APPLICATION_JSON))
                 .andDo(print());
