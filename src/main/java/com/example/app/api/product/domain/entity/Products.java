@@ -1,5 +1,6 @@
 package com.example.app.api.product.domain.entity;
 
+import com.example.app.api.orders.domain.entity.Orders;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,6 +30,9 @@ public class Products {
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @OneToMany(mappedBy = "productId")
+    private List<Orders> orders;
 
     private Boolean isSale;
 

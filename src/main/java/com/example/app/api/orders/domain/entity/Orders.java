@@ -35,7 +35,7 @@ public class Orders {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
-    @OneToOne
+    @ManyToOne
     private Products product;
 
     @ManyToOne
