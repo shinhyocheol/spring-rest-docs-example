@@ -1,8 +1,10 @@
 ifndef::snippets[]
 :snippets: ./build/generated-snippets
 endif::[]
+= API 문서 예
 
-curl
+== 포스팅 글 요청
+CURL
 include::{snippets}/posts/http-request.adoc[]
 요청정보
 include::{snippets}/posts/request-body.adoc[]
