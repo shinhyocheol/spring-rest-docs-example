@@ -2,7 +2,11 @@ ifndef::snippets[]
 :snippets: ./build/generated-snippets
 endif::[]
 
+curl
 include::{snippets}/posts/http-request.adoc[]
+요청정보
 include::{snippets}/posts/request-body.adoc[]
+응답정보
 include::{snippets}/posts/http-response.adoc[]
+응답형식
 include::{snippets}/posts/response-fields.adoc[]

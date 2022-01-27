@@ -31,9 +31,6 @@ public class Products {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "productId")
-    private List<Orders> orders;
-
     private Boolean isSale;
 
 }
